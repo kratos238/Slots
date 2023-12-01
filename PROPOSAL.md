@@ -11,7 +11,8 @@ I will be creating a slots machine brower application in which the player will s
 ## Wire Frames
 
 **Initial Landing View**
-![Alt text] Assets/image.png
+![image](https://github.com/kratos238/Slots/assets/42145938/863328bb-1bff-4ebd-aeaa-8d80d05e77fe)
+
 
 
 **Results View**
