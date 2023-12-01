@@ -59,9 +59,9 @@ A function or logic to compare the slot arrays against winning conditions.
 
 #### MVP Goals
 
-- As a player, If the spin was a win or a loss 
-- As a player, what spin number of 10 am i on 
-- As a player, what is my score at any current time 
+- As a player, I to know if the spin was a win or a loss 
+- As a player, I want to know what spin number of 10 am i on 
+- As a player, I want to know what  my score at any current time 
 - As a player who requires assistive technologies, I would like accessibility features so that I'm not left out of enjoying the game.
 - As a player I would like to be able to restart the game after my 10 spins are over 
 - As a player, I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.\*\*
@@ -86,8 +86,8 @@ Do not neglect to plan, you will thank yourself later for being proactive!
 | Day        |   | Task                               | Blockers | Notes/ Thoughts |
 |------------|---|------------------------------------|----------|-----------------|
 | Friday     |   | Create proposal, html, js, css files          |                 |
-| Saturday   |   | Create basic scaffolding           |          |                 |
-| Sunday     |   | Define Variables ,functions        |          |                 |
+| Saturday   |   | Create basic scaffolding , Define Variables ,Define Arrays , define initilization function           |          |                 |
+| Sunday     |   | Define Score, spin function  and winning conditions     |          |                 |
 | Monday     |   | Add styling                        |          |                 |
 | Tuesday    |   | Finaliza MVP                       |          |                 |
 | Wedenesday |   | Work on stretch goals              |          |                 |
