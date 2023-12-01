@@ -10,12 +10,11 @@ I will be creating a slots machine brower application in which the player will s
 ## Wire Frames
 
 **Initial Landing View**
-(https://media.git.generalassemb.ly/user/21811/files/0f7aee00-c1d9-11ea-9dad-de086a5c91fc)
+![Alt text] Assets/image.png
 
-![image]
+
 **Results View**
 
-![image](https://media.git.generalassemb.ly/user/21811/files/1a358300-c1d9-11ea-95da-6c14aefb0f18)
 
 ## User Stories
 
