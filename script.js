@@ -6,9 +6,9 @@ const slotArray = [1, 2, 3, 4, 5, 6, 7]
 
 
 //Cached Elements
-let slotRow = document.getElementsByClassName('row1')
-let slotRow2 = document.getElementsByClassName('row2')
-let slotRow3 = document.getElementsByClassName('row3')
+let slotRow = document.querySelector('.row1')
+let slotRow2 = document.querySelector('.row2')
+let slotRow3 = document.querySelector('.row3')
 
 //Functions
 
@@ -28,7 +28,7 @@ function fillSlotRow(row) {
     console.log(slotValue1)
 
 
-    console.log(row.children)
+    console.log(row.firstElementChild)
     //const faSlotValue1 = row.
     //const faSlotValue2 = row.querySelector('nth-child(2)')
     //const faSlotValue3 = row.querySelector('nth-child(3)')
