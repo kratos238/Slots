@@ -1,0 +1,20 @@
+* {
+    border: black solid 1px;
+}
+
+#slotMachine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+    border-radius: 5vmin;
+    width: 100px;
+    height: 300px
+  }
+ .square {
+    width: 10px;
+    height: 10px;
+
+ }
+
