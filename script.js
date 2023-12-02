@@ -14,36 +14,54 @@ let slotRow3 = document.querySelector('.row3')
 
 function fillSlotRow(row) {
     let fillArray = slotArray
+    let count = 0
 
     function randomValues() {
         const randomIndex = Math.floor(Math.random() * fillArray.length);
         const value = fillArray[randomIndex];
+        count +=1
+
+        if (count === 3){
+            fillArray = [1, 2, 3, 4, 5, 6, 7]
+            count = 0
+        }
         
         fillArray.splice(randomIndex, 1);
         return value;
     }
     const slotValue1 = randomValues()
-    //const slotValue2 = randomValues()
-    //const slotValue3 = randomValues()
-    console.log(slotValue1)
+    const slotValue2 = randomValues()
+    const slotValue3 = randomValues()
+    
 
 
     console.log(row.firstElementChild)
-    //const faSlotValue1 = row.
-    //const faSlotValue2 = row.querySelector('nth-child(2)')
-    //const faSlotValue3 = row.querySelector('nth-child(3)')
+    let faSlotValue1 = row.querySelector(':first-child')
+    let faSlotValue2 = row.querySelector(':nth-child(2)')
+    let faSlotValue3 = row.querySelector(':nth-child(3)')
+    
 
+    faSlotValue1.innerHTML = slotValue1
+    faSlotValue2.innerHTML = slotValue2
+    faSlotValue3.innerHTML = slotValue3
 
-    //faSlotValue1.innerHTML = slotValue1
-    //faSlotValue2.innerHTML = slotValue2
-    //faSlotValue3.innerHTML = slotValue3
+    console.log(count)
+    console.log(fillArray)
+
     }
 
-    // function iniit () {
-    //     fillSlotRow(slotRow)
-    //     fillSlotRow(slotRow2)
-    //     fillSlotRow(slotRow3)
-    // }
+    function resetSlots() {
+       let clearSlots = document.querySelectorAll('.square') 
+       clearSlots.forEach(function(slot){
+        slot.innerHTML = ''
+       })
+    }
+
+    function iniit () {
+        fillSlotRow(slotRow)
+        fillSlotRow(slotRow2)
+        fillSlotRow(slotRow3)
+    }
 
 
     
