@@ -1,11 +1,13 @@
 //Variables
 let score = 0
 let spin = 0
+let canSpin = true
 const spinButton = document.querySelector('#spinButton')
 const resetButton = document.querySelector('#resetButton')
 const slotReels = document.querySelectorAll('.square')
 const scoreDisplay = document.querySelector('#score')
 const spinDisplay = document.querySelector('#spin')
+const msgDisplay = document.querySelector('#msg')
 
 scoreDisplay.innerHTML = "Score: " + score
 spinDisplay.innerHTML = "Spin # " + spin
@@ -90,33 +92,29 @@ function spinSlots() {
     calculateScore()
     addImages()
     spinCounter()
-    console.log(score)
-    console.log(spin)
-
 }
+
+
 
 function calculateScore() {
     let row1 = slotRow.querySelector(':nth-child(2)').innerHTML
     let row2 = slotRow2.querySelector(':nth-child(2)').innerHTML
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
     if (row1 === row2 && row1 === row3) {
+        console.log(score)
         score += row1
     }
-    if (spin === 11) {
-        score = 0
-    }
+
     scoreDisplay.innerHTML = "Score: " + score
     spinDisplay.innerHTML = "Spin # " + spin
 
 }
 function spinCounter() {
     if (spin === 10) {
-        return score
-        //need to add somthing here to display score in  DOM 
+        msgDisplay.innerHTML = "Your Score " + score
+        spinButton.disabled = true
     }
-    if (spin === 11) {
-        spin = 0
-    }
+
 }
 
 
@@ -128,6 +126,8 @@ function iniit() {
     fillSlotRow(slotRow2)
     fillSlotRow(slotRow3)
     addImages()
+    calculateScore()
+    spinButton.disabled = false
 }
 
 iniit()

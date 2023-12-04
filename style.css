@@ -9,8 +9,8 @@
   justify-content: center;
   background-color: lightgrey;
   border-radius: 5vmin;
-  width: 175px;
-  height: 171px;
+  width: 200px;
+  height: 200px;
   margin: auto
 }
 
@@ -20,11 +20,18 @@
   justify-content: center;
   width: 50px;
   height: 48px;
-  animation: spinAnimation 3s ease-in-out;
+  background-color: lightcyan;
+  
 }
 
 #buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#scorecount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
