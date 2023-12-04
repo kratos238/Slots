@@ -1,30 +1,30 @@
 * {
-    border: black solid 1px;
+  border: black solid 1px;
 }
 
 #slotMachine {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgrey;
-    border-radius: 5vmin;
-    width: 175px;
-    height: 171px;
-    margin: auto
-  }
- .square {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+  border-radius: 5vmin;
+  width: 175px;
+  height: 171px;
+  margin: auto
+}
 
- }
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 48px;
+  animation: spinAnimation 3s ease-in-out;
+}
 
- #buttons {
-    display: flex;
-   align-items: center;
-   justify-content: center;
- }
-
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

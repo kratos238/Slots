@@ -4,12 +4,16 @@ let spin = 0
 const spinButton = document.querySelector('#spinButton')
 const resetButton = document.querySelector('#resetButton')
 const slotReels = document.querySelectorAll('.square')
-const slotMachine = document.querySelector('#slotMachine')
+const scoreDisplay = document.querySelector('#score')
+const spinDisplay = document.querySelector('#spin')
+
+scoreDisplay.innerHTML = "Score: " + score
+spinDisplay.innerHTML = "Spin # " + spin
 
 const slotArray = [1, 2, 3, 4, 5, 6, 7]
 
 const SLOT_IMGS = {
-    '1':  '🍒',
+    '1': '🍒',
     '2': '🍐',
     '3': '🎲',
     '4': '🍀',
@@ -21,6 +25,7 @@ const SLOT_IMGS = {
 //Event Listeners
 spinButton.addEventListener('click', spinSlots)
 resetButton.addEventListener('click', iniit)
+
 
 //Cached Elements
 let slotRow = document.querySelector('.row1')
@@ -87,6 +92,7 @@ function spinSlots() {
     spinCounter()
     console.log(score)
     console.log(spin)
+
 }
 
 function calculateScore() {
@@ -99,6 +105,9 @@ function calculateScore() {
     if (spin === 11) {
         score = 0
     }
+    scoreDisplay.innerHTML = "Score: " + score
+    spinDisplay.innerHTML = "Spin # " + spin
+
 }
 function spinCounter() {
     if (spin === 10) {
@@ -110,12 +119,15 @@ function spinCounter() {
     }
 }
 
+
+
 function iniit() {
     spin = 0
     score = 0
     fillSlotRow(slotRow)
     fillSlotRow(slotRow2)
     fillSlotRow(slotRow3)
+    addImages()
 }
 
 iniit()
