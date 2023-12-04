@@ -3,8 +3,20 @@ let score = 0
 let spin = 0
 const spinButton = document.querySelector('#spinButton')
 const resetButton = document.querySelector('#resetButton')
+const slotReels = document.querySelectorAll('.square')
+const slotMachine = document.querySelector('#slotMachine')
 
 const slotArray = [1, 2, 3, 4, 5, 6, 7]
+
+const SLOT_IMGS = {
+    '1':  '🍒',
+    '2': '🍐',
+    '3': '🎲',
+    '4': '🍀',
+    '5': '🍑',
+    '6': '💰',
+    '7': '💎'
+}
 
 //Event Listeners
 spinButton.addEventListener('click', spinSlots)
@@ -17,6 +29,15 @@ let slotRow3 = document.querySelector('.row3')
 
 //Functions
 
+function addImages() {
+    slotReels.forEach(function (slot) {
+        const slotValue = slot.innerHTML; // Get the value inside the slot
+        const color = SLOT_IMGS[slotValue]; // Get the corresponding color from SLOT_IMGS
+        if (color) {
+            slot.innerHTML = color;
+        }
+    })
+}
 function fillSlotRow(row) {
     let fillArray = [1, 2, 3, 4, 5, 6, 7]
     let count = 0
@@ -62,6 +83,7 @@ function spinSlots() {
     fillSlotRow(slotRow2)
     fillSlotRow(slotRow3)
     calculateScore()
+    addImages()
     spinCounter()
     console.log(score)
     console.log(spin)
@@ -73,6 +95,9 @@ function calculateScore() {
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
     if (row1 === row2 && row1 === row3) {
         score += row1
+    }
+    if (spin === 11) {
+        score = 0
     }
 }
 function spinCounter() {
