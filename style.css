@@ -7,11 +7,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: lightgrey;
+  background-color: rgb(76, 70, 70);
   border-radius: 5vmin;
   width: 200px;
   height: 200px;
-  margin: auto
+  margin: auto;
 }
 
 .square {
@@ -22,6 +22,10 @@
   height: 48px;
   background-color: lightcyan;
   
+}
+
+.winLane {
+  background-color: crimson;
 }
 
 #buttons {
@@ -35,3 +39,32 @@
   flex-direction: column;
   align-items: center;
 }
+
+.door {
+  /* Set to inline-block or flex, depending on your layout */
+  display: inline-block; 
+  overflow: hidden; /* Essential for the animation */
+  /* Add any additional styling needed to match your slot size */
+  width: 50px; /* Example size, adjust as needed */
+  height: 150px; /* Example size, adjust as needed */
+  margin: 5px; /* Adjust based on your layout */
+}
+
+/* Adjusted styles for .boxes (previously .square) */
+.boxes {
+  transition: transform 1s ease-in-out;
+}
+
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  .element-to-fade{
+    animation-name: fadeInOut;
+    animation-duration: 1.5s;
+    animation-iteration-count: 2;
+  }
+
+

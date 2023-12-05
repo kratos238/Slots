@@ -1,7 +1,6 @@
 //Variables
 let score = 0
 let spin = 0
-let canSpin = true
 const spinButton = document.querySelector('#spinButton')
 const resetButton = document.querySelector('#resetButton')
 const slotReels = document.querySelectorAll('.square')
@@ -11,6 +10,8 @@ const msgDisplay = document.querySelector('#msg')
 
 scoreDisplay.innerHTML = "Score: " + score
 spinDisplay.innerHTML = "Spin # " + spin
+
+
 
 const slotArray = [1, 2, 3, 4, 5, 6, 7]
 
@@ -30,9 +31,9 @@ resetButton.addEventListener('click', iniit)
 
 
 //Cached Elements
-let slotRow = document.querySelector('.row1')
-let slotRow2 = document.querySelector('.row2')
-let slotRow3 = document.querySelector('.row3')
+let slotRow = document.querySelector('#slotMachine .row1 .door')
+let slotRow2 = document.querySelector('#slotMachine .row2 .door')
+let slotRow3 = document.querySelector('#slotMachine .row3 .door')
 
 //Functions
 
@@ -73,6 +74,8 @@ function fillSlotRow(row) {
     faSlotValue1.innerHTML = slotValue1
     faSlotValue2.innerHTML = slotValue2
     faSlotValue3.innerHTML = slotValue3
+    
+    //row.classList.add('element-to-fade')
 
 }
 
@@ -91,7 +94,7 @@ function spinSlots() {
     fillSlotRow(slotRow3)
     calculateScore()
     addImages()
-    spinCounter()
+    spinCounter()  
 }
 
 
@@ -101,8 +104,7 @@ function calculateScore() {
     let row2 = slotRow2.querySelector(':nth-child(2)').innerHTML
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
     if (row1 === row2 && row1 === row3) {
-        console.log(score)
-        score += row1
+        score += parseInt(row1)
     }
 
     scoreDisplay.innerHTML = "Score: " + score
@@ -129,5 +131,9 @@ function iniit() {
     calculateScore()
     spinButton.disabled = false
 }
+
+
+
+
 
 iniit()
