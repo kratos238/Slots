@@ -1,17 +1,29 @@
 * {
   border: black solid 1px;
 }
-
+body {
+  background-image: url(Assets/slotsbkg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: black;
+}
 #slotMachine {
+  background-image: url(Assets/slotmachine.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: rgb(76, 70, 70);
   border-radius: 5vmin;
-  width: 200px;
-  height: 200px;
+  width: 369px;
+  height: 495px;
   margin: auto;
+  padding-top: 60px;
+  gap: 37px;
 }
 
 .square {
@@ -32,12 +44,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-290px);
+}
+#spinButton, #resetButton {
+  border-radius: 50%;
+  font-size: 24px;
+  background-color: #e2a710;
+  padding: 32px 16px;
+  transition-duration: 0.4s;
+  color: white;
+  margin: 20px;
+}
+#spinButton:hover, #resetButton:hover {
+  background-color: #04AA6D; 
+  color: white;
 }
 
 #scorecount {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(/Assets/Reels\ and\ Feels.png);
+  background-size: cover;
+  background-position: center;
+  
 }
 
 .door {
