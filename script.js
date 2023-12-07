@@ -95,29 +95,30 @@ function resetSlots() {
 }
 
 function spinSlots() {
-    slotReels.forEach(function (slot) {
-         slot.classList.add('element-to-fade')
+     slotReels.forEach(function (slot) {
+        slot.classList.add('element-to-fade')
         slot.classList.add('slide-Reels')
+        slot.classList.remove('match')
 
-        setTimeout(function() {
-             slot.classList.remove('element-to-fade')
+        setTimeout(function () {
+            slot.classList.remove('element-to-fade')
             slot.classList.remove('slide-Reels')
         }, 3000);
     });
     rndSpin()
     setTimeout(rndSpin(), 1000)
-    setTimeout(function() {
-    spin++
-    resetSlots()
-    fillSlots()
-    calculateScore()
-    addImages()
-    spinCounter()
+   setTimeout(function () {
+        spin++
+        resetSlots()
+        fillSlots()
+        calculateScore()
+        addImages()
+        spinCounter()
     }, 3000)
 
 }
 
-function rndSpin () {
+function rndSpin() {
     fillSlots()
     addImages()
 }
@@ -128,9 +129,9 @@ function calculateScore() {
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
     if (row1 === row2 && row1 === row3) {
         score += parseInt(row1)
-        /*matchLane.forEach(function(box) {
-            box.style.background-color = "crimson"
-        })*/
+        matchLane.forEach(function(box) {
+            box.classList.add('match')
+        })
     }
 
     scoreDisplay.innerHTML = "Score: " + score
