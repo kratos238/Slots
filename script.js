@@ -8,6 +8,10 @@ const scoreDisplay = document.querySelector('#score')
 const spinDisplay = document.querySelector('#spin')
 const msgDisplay = document.querySelector('#msg')
 const matchLane = document.querySelectorAll('.winLane')
+const matchLane2 = document.querySelectorAll('.winLane2')
+const matchLane3 = document.querySelectorAll('.winLane3')
+const matchLane4 = document.querySelectorAll('.winLane4')
+const matchLane5 = document.querySelectorAll('.winLane5')
 const winAudio = new Audio("Assets/Win.wav")
 const spinAudio = new Audio("/Assets/SpinReels.wav")
 const resetAudio = new Audio("Assets/Reset Sound.wav")
@@ -127,6 +131,23 @@ function calculateScore() {
     let row1 = slotRow.querySelector(':nth-child(2)').innerHTML
     let row2 = slotRow2.querySelector(':nth-child(2)').innerHTML
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
+
+    let rowA = slotRow.querySelector(':nth-child(1)').innerHTML
+    let rowB = slotRow2.querySelector(':nth-child(1)').innerHTML
+    let rowC = slotRow3.querySelector(':nth-child(1)').innerHTML
+
+    let rowD = slotRow.querySelector(':nth-child(3)').innerHTML
+    let rowE = slotRow2.querySelector(':nth-child(3)').innerHTML
+    let rowF = slotRow3.querySelector(':nth-child(3)').innerHTML
+
+    let rowG = slotRow.querySelector(':nth-child(1)').innerHTML
+    let rowH = slotRow2.querySelector(':nth-child(2)').innerHTML
+    let rowI = slotRow3.querySelector(':nth-child(3)').innerHTML
+
+    let rowJ = slotRow.querySelector(':nth-child(3)').innerHTML
+    let rowK = slotRow2.querySelector(':nth-child(2)').innerHTML
+    let rowL = slotRow3.querySelector(':nth-child(1)').innerHTML
+
     if (row1 === row2 && row1 === row3) {
         score += parseInt(row1)
         matchLane.forEach(function (box) {
@@ -135,6 +156,38 @@ function calculateScore() {
         })
     }
 
+    if (rowA === rowB && rowA === rowC) {
+        score += parseInt(rowA)
+        matchLane2.forEach(function (box) {
+            box.classList.add('match')
+            winAudio.play()
+        })
+    }
+    if (rowD === rowE && rowD === rowF) {
+        score += parseInt(rowD)
+        matchLane3.forEach(function (box) {
+            box.classList.add('match')
+            winAudio.play()
+        })
+    }
+
+    if (rowG === rowH && rowG === rowI) {
+        score += parseInt(rowG)
+        matchLane4.forEach(function (box) {
+            box.classList.add('match')
+            winAudio.play()
+        })
+    }
+
+    if (rowJ === rowK && rowJ === rowL) {
+        score += parseInt(rowJ)
+        matchLane5.forEach(function (box) {
+            box.classList.add('match')
+            winAudio.play()
+        })
+    }
+
+    
     scoreDisplay.innerHTML = "Score: " + score
     spinDisplay.innerHTML = "Spin # " + spin
 
