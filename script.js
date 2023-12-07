@@ -7,6 +7,7 @@ const slotReels = document.querySelectorAll('.square')
 const scoreDisplay = document.querySelector('#score')
 const spinDisplay = document.querySelector('#spin')
 const msgDisplay = document.querySelector('#msg')
+const matchLane = document.querySelectorAll('.winLane')
 
 scoreDisplay.innerHTML = "Score: " + score
 spinDisplay.innerHTML = "Spin # " + spin
@@ -94,15 +95,32 @@ function resetSlots() {
 }
 
 function spinSlots() {
+    slotReels.forEach(function (slot) {
+         slot.classList.add('element-to-fade')
+        slot.classList.add('slide-Reels')
+
+        setTimeout(function() {
+             slot.classList.remove('element-to-fade')
+            slot.classList.remove('slide-Reels')
+        }, 3000);
+    });
+    rndSpin()
+    setTimeout(rndSpin(), 1000)
+    setTimeout(function() {
     spin++
     resetSlots()
     fillSlots()
     calculateScore()
     addImages()
     spinCounter()
+    }, 3000)
+
 }
 
-
+function rndSpin () {
+    fillSlots()
+    addImages()
+}
 
 function calculateScore() {
     let row1 = slotRow.querySelector(':nth-child(2)').innerHTML
@@ -110,6 +128,9 @@ function calculateScore() {
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
     if (row1 === row2 && row1 === row3) {
         score += parseInt(row1)
+        /*matchLane.forEach(function(box) {
+            box.style.background-color = "crimson"
+        })*/
     }
 
     scoreDisplay.innerHTML = "Score: " + score
