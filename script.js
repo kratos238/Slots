@@ -8,6 +8,9 @@ const scoreDisplay = document.querySelector('#score')
 const spinDisplay = document.querySelector('#spin')
 const msgDisplay = document.querySelector('#msg')
 const matchLane = document.querySelectorAll('.winLane')
+const winAudio = new Audio("Assets/Win.wav")
+const spinAudio = new Audio("/Assets/SpinReels.wav")
+const resetAudio = new Audio("Assets/Reset Sound.wav")
 
 scoreDisplay.innerHTML = "Score: " + score
 spinDisplay.innerHTML = "Spin # " + spin
@@ -91,6 +94,7 @@ function resetSlots() {
 }
 
 function spinSlots() {
+    spinAudio.play()
     slotReels.forEach(function (slot) {
         slot.classList.add('element-to-fade')
         slot.classList.add('slide-Reels')
@@ -127,6 +131,7 @@ function calculateScore() {
         score += parseInt(row1)
         matchLane.forEach(function (box) {
             box.classList.add('match')
+            winAudio.play()
         })
     }
 
@@ -143,6 +148,7 @@ function spinCounter() {
 }
 
 function iniit() {
+    resetAudio.play()
     spin = 0
     score = 0
     fillSlotRow(slotRow)
