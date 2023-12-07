@@ -74,8 +74,15 @@ function fillSlotRow(row) {
     faSlotValue1.innerHTML = slotValue1
     faSlotValue2.innerHTML = slotValue2
     faSlotValue3.innerHTML = slotValue3
-    
+
     //row.classList.add('element-to-fade')
+
+}
+
+function fillSlots() {
+    fillSlotRow(slotRow)
+    fillSlotRow(slotRow2)
+    fillSlotRow(slotRow3)
 
 }
 
@@ -89,12 +96,10 @@ function resetSlots() {
 function spinSlots() {
     spin++
     resetSlots()
-    fillSlotRow(slotRow)
-    fillSlotRow(slotRow2)
-    fillSlotRow(slotRow3)
+    fillSlots()
     calculateScore()
     addImages()
-    spinCounter()  
+    spinCounter()
 }
 
 
