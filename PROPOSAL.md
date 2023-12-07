@@ -70,7 +70,7 @@ A function or logic to compare the slot arrays against winning conditions.
 
 - As a player, I would like a victory animation when I win the game, so that I feel good about my victory!
 
-- As a player who wants to dominate the battlefield I want to become the ultimate tic tac toe tactician so I can beat all of my opponents
+- As a player who likes to win , I would like to win more frequently
 
 #### Notionboard Template
 Notionboard template for building projects ( You can use this for any project )
