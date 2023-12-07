@@ -12,8 +12,6 @@ const matchLane = document.querySelectorAll('.winLane')
 scoreDisplay.innerHTML = "Score: " + score
 spinDisplay.innerHTML = "Spin # " + spin
 
-
-
 const slotArray = [1, 2, 3, 4, 5, 6, 7]
 
 const SLOT_IMGS = {
@@ -40,13 +38,14 @@ let slotRow3 = document.querySelector('#slotMachine .row3 .door')
 
 function addImages() {
     slotReels.forEach(function (slot) {
-        const slotValue = slot.innerHTML; // Get the value inside the slot
-        const color = SLOT_IMGS[slotValue]; // Get the corresponding color from SLOT_IMGS
+        const slotValue = slot.innerHTML; 
+        const color = SLOT_IMGS[slotValue]; 
         if (color) {
             slot.innerHTML = color;
         }
     })
 }
+
 function fillSlotRow(row) {
     let fillArray = [1, 2, 3, 4, 5, 6, 7]
     let count = 0
@@ -75,9 +74,6 @@ function fillSlotRow(row) {
     faSlotValue1.innerHTML = slotValue1
     faSlotValue2.innerHTML = slotValue2
     faSlotValue3.innerHTML = slotValue3
-
-    //row.classList.add('element-to-fade')
-
 }
 
 function fillSlots() {
@@ -95,7 +91,7 @@ function resetSlots() {
 }
 
 function spinSlots() {
-     slotReels.forEach(function (slot) {
+    slotReels.forEach(function (slot) {
         slot.classList.add('element-to-fade')
         slot.classList.add('slide-Reels')
         slot.classList.remove('match')
@@ -107,7 +103,7 @@ function spinSlots() {
     });
     rndSpin()
     setTimeout(rndSpin(), 1000)
-   setTimeout(function () {
+    setTimeout(function () {
         spin++
         resetSlots()
         fillSlots()
@@ -129,7 +125,7 @@ function calculateScore() {
     let row3 = slotRow3.querySelector(':nth-child(2)').innerHTML
     if (row1 === row2 && row1 === row3) {
         score += parseInt(row1)
-        matchLane.forEach(function(box) {
+        matchLane.forEach(function (box) {
             box.classList.add('match')
         })
     }
@@ -138,15 +134,13 @@ function calculateScore() {
     spinDisplay.innerHTML = "Spin # " + spin
 
 }
+
 function spinCounter() {
     if (spin === 10) {
         msgDisplay.innerHTML = "Your Score " + score
         spinButton.disabled = true
     }
-
 }
-
-
 
 function iniit() {
     spin = 0
@@ -158,9 +152,5 @@ function iniit() {
     calculateScore()
     spinButton.disabled = false
 }
-
-
-
-
 
 iniit()
