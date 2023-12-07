@@ -12,12 +12,15 @@ body {
 h5 {
   border: 10px;
   border-color: rgb(22, 22, 24);
-  color: rgb(212, 255, 0);
-  background: rgb(19, 18, 18);
+  color: rgb(221 196 167 / 92%);
+  background: rgb(154 63 51);
   transform: translateX(100px);
   border: 2px solid rgb(195, 184, 27);
   border-radius: 50px;
   border-style: outset;
+  width: 71px;
+  text-align: center;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 #slotMachine {
@@ -75,11 +78,12 @@ h5 {
   transition-duration: 0.4s;
   color: white;
   margin: 20px;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 #spinButton:hover,
 #resetButton:hover {
-  background-color: #04AA6D;
+  background-color: #ce4f2c;
   color: white;
 }
 
