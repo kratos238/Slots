@@ -15,7 +15,8 @@ Note: There is a win Animation and sound effect so if you win , you will know.
 You must hit the reset button to continue playing after 10 spins.
 
 ## Screenshots/Wireframes
-
+![Alt text](Assets/image.png)
+![Alt text](<Assets/Reels and Feels IMG.jpg>)
 ## Development Timeline
 Here's a quick overview of our development process and milestones:
 

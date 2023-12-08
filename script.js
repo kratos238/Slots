@@ -19,8 +19,6 @@ const resetAudio = new Audio("Assets/Reset Sound.wav")
 scoreDisplay.innerHTML = "Score: " + score
 spinDisplay.innerHTML = "Spin # " + spin
 
-const slotArray = [1, 2, 3, 4, 5, 6, 7]
-
 const SLOT_IMGS = {
     '1': '🍒',
     '2': '🍐',
