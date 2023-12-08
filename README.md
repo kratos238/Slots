@@ -1,7 +1,7 @@
 # Slots: Reels and Feelss
 
 ## Overview
-"Reels and Feelss" is an engaging browser game that combines the thrill of slot games with a sleek, user-friendly interface. Built using HTML, CSS, and JavaScript, this game offers an immersive experience for players looking for fun and excitement.
+"Reels and Feelss" is an engaging browser slot machine game that combines the thrill of slot games with a sleek, user-friendly interface. Built using HTML, CSS, and JavaScript, this game offers an immersive experience for players looking for fun and excitement.
 
 ## Technologies Used
 - HTML
