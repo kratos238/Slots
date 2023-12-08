@@ -80,3 +80,7 @@ Compare Arrays for Winning Conditions:
 
 A function or logic to compare the slot arrays against winning conditions
 
+**NextSteps**
+-Add a currency 
+-Fix the animation to be a proper slot spin
+
