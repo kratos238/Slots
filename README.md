@@ -43,7 +43,3 @@ Here's a quick overview of our development process and milestones:
 - [x] As a player I would like to be able to restart the game after my 10 spins are over 
 - [x]  As a player, I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game
 
----
-
-This structure provides a clear and detailed overview of your game, from the technology stack to the development timeline, ensuring that anyone who reads the README gets a comprehensive understanding of "Reels and Feelss". Remember, a README is often the first thing people will see in your repository, so making it informative and easy to understand is key to attracting and retaining interest in your game.
-
