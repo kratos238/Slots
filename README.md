@@ -15,7 +15,6 @@ Note: There is a win Animation and sound effect so if you win , you will know.
 You must hit the reset button to continue playing after 10 spins.
 
 ## Screenshots/Wireframes
-(Include screenshots or wireframes of your game here. This gives a visual idea of what the game looks like.)
 
 ## Development Timeline
 Here's a quick overview of our development process and milestones:
